@@ -1,4 +1,4 @@
-package com.brestrai.utilitario.commons;
+package com.brestrai.utils.template.commons;
 
 public interface IDto<T> {
 

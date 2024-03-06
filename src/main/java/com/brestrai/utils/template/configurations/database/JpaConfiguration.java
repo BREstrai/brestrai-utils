@@ -1,4 +1,4 @@
-package com.brestrai.utilitario.configurations.database;
+package com.brestrai.utils.template.configurations.database;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

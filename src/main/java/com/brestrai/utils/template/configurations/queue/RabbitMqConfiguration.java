@@ -1,4 +1,4 @@
-package com.brestrai.utilitario.configurations.queue;
+package com.brestrai.utils.template.configurations.queue;
 
 public abstract class RabbitMqConfiguration {
 

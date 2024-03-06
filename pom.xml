@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.brestrai</groupId>
-    <artifactId>utilitario</artifactId>
+    <artifactId>utils-template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>utilitario</name>
+    <name>utils-template</name>
     <description>Utils</description>
 
     <properties>
@@ -41,22 +41,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
