@@ -13,23 +13,23 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-public abstract class JpaConfiguration {
+public abstract class DatabaseConfiguration {
 
-    public abstract String setEntityScanPackage();
+    public abstract String getEntityScanPackage();
 
-    public abstract String setDriver();
+    public abstract String getDriver();
 
-    public abstract String setUrl();
+    public abstract String getUrl();
 
-    public abstract String setUsername();
+    public abstract String getUsername();
 
-    public abstract String setPassword();
+    public abstract String getPassword();
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource);
-        entityManagerFactory.setPackagesToScan(setEntityScanPackage());
+        entityManagerFactory.setPackagesToScan(getEntityScanPackage());
         entityManagerFactory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         entityManagerFactory.setJpaProperties(getProperties());
 
@@ -39,10 +39,10 @@ public abstract class JpaConfiguration {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(setDriver());
-        dataSource.setUrl(setUrl());
-        dataSource.setUsername(setUsername());
-        dataSource.setPassword(setPassword());
+        dataSource.setDriverClassName(getDriver());
+        dataSource.setUrl(getUrl());
+        dataSource.setUsername(getUsername());
+        dataSource.setPassword(getPassword());
 
         DatabaseStartupValidator validator = new DatabaseStartupValidator();
         validator.setDataSource(dataSource);

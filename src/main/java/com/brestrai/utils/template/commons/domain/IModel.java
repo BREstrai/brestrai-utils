@@ -1,4 +1,4 @@
-package com.brestrai.utils.template.commons;
+package com.brestrai.utils.template.commons.domain;
 
 public interface IModel<D> {
 
