@@ -1,4 +1,4 @@
-package com.brestrai.utils.template.commons.service.queue;
+package com.brestrai.utils.commons.service.queue;
 
 public interface IProducer<T> {
 

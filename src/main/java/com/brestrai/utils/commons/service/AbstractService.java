@@ -1,4 +1,4 @@
-package com.brestrai.utils.template.commons.service;
+package com.brestrai.utils.commons.service;
 
 import org.springframework.stereotype.Service;
 

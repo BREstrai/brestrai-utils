@@ -1,4 +1,4 @@
-package com.brestrai.utils.template.configurations.queue;
+package com.brestrai.utils.configurations.queue;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

@@ -1,6 +1,6 @@
-package com.brestrai.utils.template.commons.service.queue;
+package com.brestrai.utils.commons.service.queue;
 
-import com.brestrai.utils.template.commons.service.AbstractService;
+import com.brestrai.utils.commons.service.AbstractService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
