@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public abstract class AbstractException extends RuntimeException {
 
-    private ErrorResponse errorResponse;
+    protected ErrorResponse errorResponse;
 
     public AbstractException(String msg) {
 
