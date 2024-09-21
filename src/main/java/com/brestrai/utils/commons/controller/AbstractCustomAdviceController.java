@@ -20,6 +20,7 @@ public abstract class AbstractCustomAdviceController {
 
             String fieldName = error.getField();
             String errorMessage = error.getDefaultMessage();
+
             errors.put(fieldName, errorMessage);
         });
 
@@ -29,8 +30,10 @@ public abstract class AbstractCustomAdviceController {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleException(Exception e) {
 
-        ErrorResponse errorResponse = new ErrorResponse("ERRO_INTERNO", e.getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
 
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(errorResponse, errorResponse.getStatusCode());
     }
+
+
 }
